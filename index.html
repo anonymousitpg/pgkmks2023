@@ -14,9 +14,23 @@
      </script>
   </head>
   <body>
-    <main>
-        <h1>Welcome to My Website</h1>  
-    </main>
-	<script></script>
+   
+        <img id="myImage" src="https://anonymousitpg.github.io/pgkmks2023/1x1-00000000.png" alt="Image">
+    
+	<script>
+        // Get a reference to the image element
+        var myImage = document.getElementById('myImage');
+
+        // Attach a 'load' event listener to the image
+        myImage.addEventListener('load', function() {
+            console.log('Image loaded');
+        });
+
+        // If the image is already cached, and the 'load' event has already fired,
+        // you can check if it's complete like this:
+        if (myImage.complete) {
+            console.log('Image already loaded');
+        }
+    </script>
   </body>
 </html>
